@@ -1,4 +1,4 @@
-# Tempest Incident Response (SOC Analyst L1 Portfolio Project)
+# Tempest Incident Response
 
 ## Project Overview
 
