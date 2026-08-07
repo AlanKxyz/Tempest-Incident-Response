@@ -1,35 +1,73 @@
-# Indicators of Compromise
+# Indicators of Compromise (IOCs)
+
+The following Indicators of Compromise (IOCs) were identified during the Tempest Incident Response investigation.
 
 ## IP Addresses
 
 | Indicator | Description |
 |-----------|-------------|
-| x.x.x.x | C2 Server |
+| 167.71.199.191 | Malicious server hosting the initial payload |
+| 167.71.222.162 | Command and Control (C2) server |
+
+---
 
 ## Domains
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| phishteam.xyz | Malicious domain used for payload delivery |
+| resolvecyber.xyz | Command and Control (C2) domain |
+
+---
 
 ## URLs
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| hxxp://phishteam[.]xyz/02dcf07/index.html | Malicious page embedded in the document |
+| hxxp://phishteam[.]xyz/02dcf07/update.zip | Stage 1 payload |
+| hxxp://phishteam[.]xyz/02dcf07/first.exe | Stage 2 payload |
+
+---
 
 ## SHA256
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| CE278CA242AA2023A4FE04067B0A32FBD3CA1599746C160949868FFC7FC3D7D8 | Stage 2 malware (first.exe) |
+| 8A99353662CCAE117D2BB22EFD8C43D7169060450BE413AF763E8AD7522D2451 | Chisel reverse SOCKS proxy |
+
+---
 
 ## File Names
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| free_magicules.doc | Initial malicious document |
+| update.zip | Archive downloaded by PowerShell |
+| first.exe | Stage 2 malware |
+| ch.exe | Reverse SOCKS proxy (Chisel) |
+
+---
 
 ## Registry Keys
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| HKCU\Software\Microsoft\Windows\CurrentVersion\Run | Persistence location monitored during the investigation |
+
+---
 
 ## Services
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| No malicious Windows service identified | Persistence was achieved via the Startup folder rather than a Windows service |
+
+---
 
 ## User Accounts
 
-...
+| Indicator | Description |
+|-----------|-------------|
+| benimaru | Compromised user |
