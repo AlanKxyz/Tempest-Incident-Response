@@ -1,0 +1,35 @@
+# Indicators of Compromise
+
+## IP Addresses
+
+| Indicator | Description |
+|-----------|-------------|
+| x.x.x.x | C2 Server |
+
+## Domains
+
+...
+
+## URLs
+
+...
+
+## SHA256
+
+...
+
+## File Names
+
+...
+
+## Registry Keys
+
+...
+
+## Services
+
+...
+
+## User Accounts
+
+...
