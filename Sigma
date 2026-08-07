@@ -1,0 +1,14 @@
+title: Suspicious PowerShell spawned by Word
+
+logsource:
+  product: windows
+
+detection:
+  selection:
+    ParentImage|endswith:
+      - WINWORD.EXE
+    Image|endswith:
+      - powershell.exe
+condition: selection
+
+level: high
