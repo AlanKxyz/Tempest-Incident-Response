@@ -1,0 +1,12 @@
+## What went well
+
+- Fast IOC identification
+- Timeline reconstruction
+- Multiple log correlation
+
+## Improvements
+
+- Better PowerShell logging
+- Enable Script Block Logging
+- Improve Sigma coverage
+- Tune SIEM alerts
