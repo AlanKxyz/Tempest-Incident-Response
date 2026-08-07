@@ -1,0 +1,11 @@
+| Technique | ID |
+|-----------|----|
+| Spearphishing Attachment | T1566.001 |
+| PowerShell | T1059.001 |
+| Command and Scripting Interpreter | T1059 |
+| Ingress Tool Transfer | T1105 |
+| Scheduled Task | T1053 |
+| Create Service | T1543 |
+| Registry Run Keys | T1547 |
+| Credential Dumping | T1003 |
+| Command and Control | T1071 |
