@@ -1,0 +1,12 @@
+# Incident Timeline
+
+| Time | Event |
+|------|-------|
+| 08:10 | User opened malicious Word document |
+| 08:11 | WINWORD.exe spawned PowerShell |
+| 08:11 | PowerShell downloaded payload |
+| 08:12 | Malware executed |
+| 08:15 | Persistence established |
+| 08:18 | C2 communication observed |
+| 08:23 | Privilege escalation |
+| 08:30 | Credential access |
