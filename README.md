@@ -1,78 +1,91 @@
 # Tempest Incident Response
 
-## Project Overview
+## Executive Summary
 
-This repository documents my investigation of the **Tempest Incident Response** scenario.
+This project documents a complete DFIR (Digital Forensics & Incident Response) investigation of a compromised Windows workstation.
 
-The objective was to simulate the work of a SOC Level 1 analyst responsible for triaging, investigating, and documenting a malware intrusion using Windows forensic artifacts and network traffic.
+The investigation identified a malicious Microsoft Word document as the initial infection vector. The document executed PowerShell commands which downloaded additional malware payloads, established persistence, and communicated with external infrastructure.
 
-Rather than simply answering challenge questions, this project focuses on demonstrating:
+The objective of this project was to simulate the responsibilities of a SOC Level 1 Analyst and demonstrate the ability to:
 
-- Incident investigation workflow
-- Log analysis
-- IOC extraction
-- Timeline reconstruction
-- MITRE ATT&CK mapping
-- Detection engineering
-- Professional incident documentation
+- Triage security alerts
+- Analyze Windows forensic artifacts
+- Investigate attacker activity
+- Extract Indicators of Compromise (IOCs)
+- Reconstruct an attack timeline
+- Map activity to MITRE ATT&CK
+- Create detection content
+- Produce professional incident documentation
 
 ---
 
 ## Scenario
 
-A critical security alert was escalated from the SOC monitoring team.
+A security alert was escalated from the SOC monitoring platform after suspicious activity was detected on a Windows workstation.
 
-Initial evidence suggested the execution of a malicious Microsoft Word document that initiated a multi-stage malware infection.
+Evidence suggested execution of a malicious Microsoft Word document followed by PowerShell activity, malware download behavior, persistence creation, and outbound communication to attacker-controlled infrastructure.
 
 Available evidence included:
 
-- Windows Event Logs
+- Windows Security Logs
 - Sysmon Logs
-- PCAP Capture
-- Security Alerts
+- Network Packet Capture (PCAP)
+- Endpoint Security Alerts
 
 ---
 
-## Investigation Goals
+## Investigation Objectives
 
-- Determine initial access
-- Identify executed malware
-- Trace attacker activity
-- Discover persistence mechanisms
+- Identify initial access vector
+- Determine malware execution chain
+- Investigate attacker behavior
+- Identify persistence mechanisms
 - Extract Indicators of Compromise
-- Build attack timeline
-- Recommend detection improvements
+- Reconstruct attack timeline
+- Map techniques to MITRE ATT&CK
+- Develop detection opportunities
+- Recommend security improvements
 
 ---
 
 ## Tools Used
 
-- Sysmon
-- Windows Event Viewer
-- Wireshark
-- Timeline Explorer
-- PowerShell
-- MITRE ATT&CK Navigator
+| Tool | Purpose |
+|--------|----------|
+| Sysmon | Endpoint telemetry |
+| Windows Event Viewer | Log analysis |
+| Wireshark | Network traffic analysis |
+| Timeline Explorer | Timeline reconstruction |
+| PowerShell | Artifact analysis |
+| MITRE ATT&CK Navigator | Technique mapping |
 
 ---
 
 ## Skills Demonstrated
 
-✔ Incident Response
+### Incident Response
 
-✔ Log Analysis
+- Alert triage
+- Incident investigation
+- Evidence correlation
 
-✔ Windows Forensics
+### Forensics
 
-✔ Network Forensics
+- Windows log analysis
+- Sysmon event analysis
+- Timeline reconstruction
 
-✔ IOC Hunting
+### Threat Hunting
 
-✔ MITRE ATT&CK Mapping
+- IOC extraction
+- Process activity analysis
+- Network investigations
 
-✔ Malware Investigation
+### Detection Engineering
 
-✔ Documentation
+- Sigma rule creation
+- Detection recommendations
+- ATT&CK mapping
 
 ---
 
@@ -80,53 +93,42 @@ Available evidence included:
 
 Initial Access
 ↓
-
 Malicious Word Document
 ↓
-
 PowerShell Execution
 ↓
-
 Payload Download
 ↓
-
-Persistence
+Persistence Creation
 ↓
-
-Command & Control Communication
+C2 Communication
 ↓
-
 Privilege Escalation
 ↓
-
 Credential Access
 
 ---
 
 ## Repository Structure
 
-Timeline/
-
-IOC/
-
-Detection/
-
-MITRE-ATTACK/
-
-Evidence/
-
-Lessons-Learned/
-
----
-
-## Key Takeaways
-
-This project improved my ability to:
-
-- correlate multiple log sources
-- identify attacker behavior
-- document an investigation
-- understand attacker TTPs
-- communicate findings clearly
-
-The repository is intended to represent the type of documentation expected from a junior SOC Analyst or Incident Responder.
+```text
+Tempest-Incident-Response
+│
+├── Timeline
+│   └── Attack Timeline.md
+│
+├── IOC
+│   └── IOC Report.md
+│
+├── Detection
+│   └── Detection Opportunities.md
+│
+├── Sigma
+│   └── Suspicious PowerShell Download.yml
+│
+├── MITRE Mapping
+│   └── ATTACK Mapping.md
+│
+└── Lessons Learned
+    └── Lessons Learned.md
+``
